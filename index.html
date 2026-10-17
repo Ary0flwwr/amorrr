@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d12">
+<title>para amorr ♡</title>
+<style>
+:root{--pink:#f3a9c4;--soft:#f8dce7;--bg:#100d12;--card:#19141c;--muted:#c9b8c4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at top,#2b1726 0%,var(--bg) 55%);color:#fff3f7;font-family:Georgia,'Times New Roman',serif;min-height:100vh;overflow-x:hidden}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.heart{position:absolute;bottom:-40px;color:var(--pink);opacity:.55;animation:floatUp linear infinite;font-size:18px}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+main{position:relative;z-index:1;width:min(760px,92%);margin:auto;padding:42px 0 70px;text-align:center}
+.eyebrow{letter-spacing:4px;text-transform:uppercase;color:var(--pink);font:11px Arial,sans-serif}
+h1{font-size:clamp(42px,11vw,76px);font-weight:normal;margin:15px 0 8px;line-height:1.02}
+h1 span{color:var(--pink);font-style:italic}
+.subtitle{color:var(--muted);font-size:17px;line-height:1.6;margin:0 auto 26px;max-width:480px}
+.badge{display:inline-block;border:1px solid #70465c;border-radius:999px;padding:8px 14px;color:var(--soft);font:12px Arial,sans-serif;margin:4px}
+.card{background:linear-gradient(145deg,rgba(40,27,39,.96),rgba(23,18,27,.96));border:1px solid #503447;border-radius:22px;padding:clamp(22px,6vw,38px);margin:22px 0;box-shadow:0 18px 60px #0005}
+h2{font-size:28px;font-weight:normal;margin:0 0 18px}
+.letter{font-size:17px;line-height:1.9;color:#f7eaf0;text-align:left}
+.letter p{margin:0 0 15px}
+.signature{color:var(--pink);font-style:italic;text-align:right;font-size:21px;margin-top:22px}
+button,.linkbtn{border:1px solid var(--pink);background:var(--pink);color:#24121c;padding:13px 18px;border-radius:999px;font-size:14px;font-weight:bold;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;margin:5px}
+button:hover,.linkbtn:hover{transform:translateY(-2px);box-shadow:0 7px 25px #f3a9c433}
+button.secondary{background:transparent;color:var(--soft)}
+.surprise{display:none;margin-top:18px;padding:17px;border-radius:15px;background:#251923;color:var(--soft);font-size:17px;line-height:1.7;animation:appear .3s ease}
+@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.song-icon{font-size:42px;color:var(--pink);margin:8px}
+.song-note{font:13px Arial,sans-serif;color:var(--muted);line-height:1.6}
+input{width:min(100%,390px);background:#100d12;color:#fff;border:1px solid #654257;border-radius:12px;padding:12px;margin:8px 0;font-size:14px}
+footer{color:#bba6b4;font:12px Arial,sans-serif;letter-spacing:1px;margin-top:32px}
+.bigheart{font-size:38px;color:var(--pink);animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.15)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts" aria-hidden="true"></div>
+<main>
+  <div class="eyebrow">una cosita hecha para ti</div>
+  <h1>Para ti, <span>amorr</span> ♡</h1>
+  <p class="subtitle">No sé cómo explicarlo sin ponerme cursi… así que hice una página. Mucho más normal, ¿verdad? 🤭</p>
+  <div><span class="badge">♡ mi persona favorita</span><span class="badge">♡ hecha con cariño</span></div>
+
+  <section class="card">
+    <div class="bigheart">♡</div>
+    <h2>Quería decirte algo…</h2>
+    <div class="letter">
+      <p>Amorr, me encantó que aparecieras en mi vida. 💗</p>
+      <p>De todas las casualidades bonitas que pudieron pasarme, qué suerte la mía que una de ellas fueras tú.</p>
+      <p>Me gusta tenerte en mis días, contarte mis cosas, reírme contigo y hasta hacerte bromas nomás porque sí. No prometo no molestarte… de hecho, eso viene incluido en el paquete. 😌</p>
+      <p>Gracias por ser tú, por los momentos bonitos y por hacer que cosas sencillas se sientan especiales. Ojalá nos queden muchísimas risas, recuerdos y abrazos por compartir.</p>
+      <p>No necesitas hacer nada extraordinario para hacerme feliz; muchas veces basta con que seas tú y estés aquí.</p>
+      <p class="signature">Con mucho cariño, tu persona ♡</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Unos mensajitos para ti</h2>
+    <p class="song-note">Pícale a los botones, pero no hagas trampa y los leas todos de golpe. 👀</p>
+    <button onclick="reveal('m1')">Cuando me extrañes ♡</button>
+    <button class="secondary" onclick="reveal('m2')">Cuando tengas un mal día</button>
+    <button class="secondary" onclick="reveal('m3')">Un recordatorio importante</button>
+    <div id="m1" class="surprise">Ven acá, aunque sea en pensamiento, y recibe un abrazote virtual. Te mando muchos besitos y permiso oficial para extrañarme tantito. 💋</div>
+    <div id="m2" class="surprise">Respira, amorr. No todos los días tienen que salir perfectos. Espero que recuerdes lo mucho que vales y que mañana puede sentirse un poquito más ligero. Te mando un abrazo enorme. 🫂</div>
+    <div id="m3" class="surprise">Por si se te olvida: me encantas, me alegra que estés en mi vida y sí, probablemente volvería a elegirte… incluso sabiendo tus chistes malos. 🤨💕</div>
+  </section>
+
+  <section class="card">
+    <div class="song-icon">♫</div>
+    <h2>Nuestra canción</h2>
+    <p class="song-note">Aquí puedes poner la canción que sea especial para ustedes. Pega un enlace de Spotify o YouTube y aparecerá el botón para abrirla.</p>
+    <input id="songUrl" type="url" placeholder="Pega aquí el enlace de nuestra canción" aria-label="Enlace de la canción">
+    <div><button onclick="saveSong()">Guardar nuestra canción ♫</button></div>
+    <div id="songResult" class="surprise"></div>
+  </section>
+
+  <section class="card">
+    <h2>Y por si no te lo dije hoy…</h2>
+    <p style="font-size:19px;line-height:1.8">Qué bonito que coincidimos en esta vida. No sé qué nos espera más adelante, pero me hace feliz compartir este pedacito del camino contigo. 💗</p>
+    <button onclick="finalMessage()">Toca aquí para el último mensajito</button>
+    <div id="last" class="surprise">Sorpresaaa: tienes una admiradora oficial que piensa que eres muy especial. Sí, soy yo. No se aceptan devoluciones. 😚♡</div>
+  </section>
+  <div class="bigheart">♡</div>
+  <footer>HECHO CON CARIÑO PARA AMORR · TÚ Y YO Y MUCHAS RISAS MÁS</footer>
+</main>
+<script>
+const holder=document.getElementById('hearts');
+for(let i=0;i<22;i++){let h=document.createElement('span');h.className='heart';h.textContent=['♡','♥','✧'][i%3];h.style.left=Math.random()*100+'%';h.style.animationDuration=(9+Math.random()*12)+'s';h.style.animationDelay=(-Math.random()*18)+'s';h.style.fontSize=(12+Math.random()*18)+'px';holder.appendChild(h)}
+function reveal(id){const el=document.getElementById(id);el.style.display=el.style.display==='block'?'none':'block'}
+function finalMessage(){reveal('last');if(document.getElementById('last').style.display==='block')document.getElementById('last').scrollIntoView({behavior:'smooth',block:'center'})}
+function saveSong(){const input=document.getElementById('songUrl');const result=document.getElementById('songResult');let url=input.value.trim();if(!url){result.textContent='Primero pega el enlace de su canción favorita, amorr ♡';result.style.display='block';return}try{const parsed=new URL(url);if(!['https:','http:'].includes(parsed.protocol))throw 0;result.innerHTML='';const a=document.createElement('a');a.href=parsed.href;a.target='_blank';a.rel='noopener noreferrer';a.className='linkbtn';a.textContent='Escuchar nuestra canción ♫';result.appendChild(a);result.style.display='block'}catch(e){result.textContent='Ese enlace no parece válido. Intenta copiarlo otra vez ♡';result.style.display='block'}}
+</script>
+</body>
+</html>
